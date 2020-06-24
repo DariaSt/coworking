@@ -1,0 +1,50 @@
+.intro-wrap{
+  height: 100%;
+  background: url('../../img/intro/bg.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  max-width: 195px;
+  opacity: 0;
+  animation: intro-animation 1s 
+  cubic-bezier(.17,.67,.46,1.09) .6s 1 forwards;
+}
+
+.intro__logo{
+  padding: 10px;
+}
+
+.intro__btn{
+  margin-top: 17px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--purple-color);
+  border: 3px solid currentColor;
+  padding: 14px 20px;
+}
+
+@keyframes intro-animation{
+  from{
+    transform: rotate(15deg) translateY(70px) scale(.2);
+  }
+  30%{
+    opacity: 1;
+  }
+  40%{
+    transform: rotate(-20deg) translateY(0);
+  }
+  60%{
+    transform: rotate(10deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+

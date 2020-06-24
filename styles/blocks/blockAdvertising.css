@@ -1,0 +1,19 @@
+.advertising{
+  background-color: #2b2b40;
+  background-image: url("../../img/reviews/pattern.png");
+  background-size: 100%;
+}
+
+.advertising__text{
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 45px 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+.advertising__discont{
+  font-weight: bold;
+  color: var(--purple-color);
+}

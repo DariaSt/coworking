@@ -1,0 +1,16 @@
+.breadcrumbs{
+  display: flex;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 14px;
+  text-align: left;
+}
+
+.breadcrumbs__item-main{
+  color: var(--purple-color);
+}
+
+.breadcrumbs__item:not(.breadcrumbs__item-main)::before{
+  content: '/';
+  margin: 0 5px;
+}

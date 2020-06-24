@@ -1,0 +1,27 @@
+.footer{
+  background-color: #2b2b40;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.footer__content{
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 12px;
+}
+
+.footer__desc{
+  font-weight: 300;
+  width: 264px;
+}
+
+.footer__link{
+  color: inherit;
+  font-weight: bold;
+}
+
+.footer__bold{
+  font-weight: bold;
+}

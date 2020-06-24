@@ -1,0 +1,132 @@
+.form-section{
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.form{
+  margin: auto;
+  margin-top: 70px;
+  background-color: #f4f4f4;
+  padding: 50px 70px;
+  border-radius: 3px;
+  width: 64%;
+
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.form__row{
+  display: flex;
+  margin-top: 18px;
+}
+
+.form__row:first-child{
+  margin-top: 30px;
+}
+
+.form__block{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__block:nth-child(2n){
+  margin-left: 23px;
+}
+
+.form__input, .form__textarea{
+  margin-top: 10px;
+  font-size: inherit;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.form__input:focus, .form__textarea:focus{
+  border: 1px solid var(--purple-color);
+}
+
+.form__textarea{
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form__radio-group{
+  margin-top: 10px;
+}
+
+.form__radio-label{
+  margin-right: 19px;
+}
+
+/* для элемента input c type="radio" */
+.form__radio-label>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin-right: 5px;
+}
+
+/* для элемента label связанного с .form__radio-label */
+.form__radio-label>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.form__radio-label>span::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #c8c8c8;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на радио */
+.form__radio-label>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: var(--purple-color);
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.form__radio-label>input:not(:disabled):active+span::before {
+  background-color: #c8c8c8;
+  border-color: var(--purple-color);
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.form__radio-label>input:focus+span {
+  color: var(--purple-color);
+}
+
+.form__radio-label>input:checked+span{
+  color: var(--purple-color);
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.form__radio-label>input:checked+span::before {
+  border-color: var(--purple-color);
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5.5 -5.5 10 10'%3e%3ccircle r='3.5' fill='rgb(203,35,118)'/%3e%3c/svg%3e");
+}
+
+.form__btn{
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.4px;
+  padding: 16px 19px;
+  background-color: #2b2b40;
+  border-radius: 3px;
+}
